@@ -6,7 +6,9 @@ public class Main {
         zoo.addList(new Wolf("Wolf"))
                 .addList(new Hare("Hare"))
                 .addList(new Duck("DonaldDuck"))
-                .addList(new Bat("Batman"));
+                .addList(new Bat("Batman"))
+                .addList(new Dolphin("Ben"))
+                .addList(new Shark("Stas"));
         for (var item: zoo.getListAnimal()) {
             System.out.println(item);
         }
@@ -25,5 +27,7 @@ public class Main {
         System.out.println("Winner " + zoo.winnerWalk());
         System.out.println("-----------------");
         System.out.println("Winner " + zoo.winnerFly());
+        System.out.println("------------------");
+        System.out.println("Winner: " + zoo.winnerSwim());
     }
 }

@@ -41,6 +41,15 @@ public class Zoo {
         }
         return flyables;
     }
+    public List<Swimible> swimibles(){
+        List<Swimible> swimibles = new ArrayList<>();
+        for (var item:
+             listAnimal) {
+            if (item instanceof Swimible)
+                swimibles.add((Swimible) item);
+        }
+        return swimibles;
+    }
     public Walkable winnerWalk(){
         int index = 0;
         for (int i = 0; i < walkables().size(); i++){
@@ -56,5 +65,13 @@ public class Zoo {
                 index = i;
         }
         return flyables().get(index);
+    }
+    public Swimible winnerSwim(){
+        int index = 0;
+        for (int i = 0; i < swimibles().size(); i++) {
+            if(swimibles().get(i).speedSwim() > swimibles().get(index).speedSwim())
+                index = i;
+        }
+        return swimibles().get(index);
     }
 }
